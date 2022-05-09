@@ -437,7 +437,10 @@
             <button class="btn btn-primary" data-filter=".vinyl">Vinyl</button>
             <button class="btn btn-primary" data-filter=".staircases">Staircases</button>
           </div>
-        </div>  
+        </div>
+
+        <div class="row no-gutter">       
+        </div>
         
         <div id="posts" class="row no-gutter">
           <div class="item hardwood col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
@@ -856,6 +859,13 @@
 		}
 			
 	</script>
+
+<!-- refreshing the img layout after all images are loaded -->
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    AOS.refresh();
+  });
+</script>
     
   </body>
 </html>

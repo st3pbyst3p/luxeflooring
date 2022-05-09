@@ -146,7 +146,7 @@
             </div>
           </div>
 
-          <div id="posts" class="row no-gutter">            
+          <div id="posts" class="row no-gutter">       
           </div>
           <!-- ----------------------------- -->
 
@@ -1288,16 +1288,12 @@
   
   <script src="js/main.js"></script>
 
-  <script>
-
-		window.addEventListener('DOMContentLoaded', (event) => {
-      
-      var instance = $.fancybox.getInstance();
-      console.log('DOM fully loaded and parsed', $.fancybox);
-      // instance.update();
-    });
-			
-	</script>
+  <!-- refreshing the img layout after all images are loaded -->
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    AOS.refresh();
+  });
+</script>
     
   </body>
 </html>
