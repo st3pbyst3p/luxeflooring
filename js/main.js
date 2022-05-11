@@ -337,6 +337,10 @@ jQuery(document).ready(function($) {
 	      columnWidth: '.col-sm-3'
 	    });
 	  });
+
+	  $container.isotope({
+		columnWidth: '.col-sm-3'
+	  });
 	  
 	  $container.isotope({ filter: '*' });
 
