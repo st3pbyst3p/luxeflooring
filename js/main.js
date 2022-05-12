@@ -342,10 +342,13 @@ jQuery(document).ready(function($) {
 		columnWidth: '.col-sm-3'
 	  });
 	  
-	  $container.isotope({ filter: '-' });
-	  setTimeout(function(){
-		$container.isotope({ filter: '*' });
-	  }, 1)
+	  $container.isotope({ filter: '*' });
+	  Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+		$container.isotope({ filter: '-' });
+		setTimeout(function(){
+			$container.isotope({ filter: '*' });
+		}, 100)
+	  });
 	  
 
 	    // filter items on button click
