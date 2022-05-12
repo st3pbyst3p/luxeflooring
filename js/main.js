@@ -345,7 +345,7 @@ jQuery(document).ready(function($) {
 	  $container.isotope({ filter: '-' });
 	  setTimeout(function(){
 		$container.isotope({ filter: '*' });
-	  }, 1000)
+	  }, 1)
 	  
 
 	    // filter items on button click
