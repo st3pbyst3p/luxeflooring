@@ -342,7 +342,11 @@ jQuery(document).ready(function($) {
 		columnWidth: '.col-sm-3'
 	  });
 	  
-	  $container.isotope({ filter: '*' });
+	  $container.isotope({ filter: '-' });
+	  setTimeout(function(){
+		$container.isotope({ filter: '*' });
+	  }, 1000)
+	  
 
 	    // filter items on button click
 	  $('#filters').on( 'click', 'button', function() {
